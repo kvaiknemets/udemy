@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grey {
+            background-color: #333333;
+            color: #f0f0f0;
+        }
+
+        #sendItem {
+            transition: 3s all;
+            left: 0;
+        }
+
+        .leftTrans {
+            left: 3000px !important;
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+        alert("Watch out! Red Fully goats are on their way!");
+
+        document.write("I'm printing a fluffy red goat...<br>");
+        document.write("I'm printing a fluffy red goat...<br>");
+        document.write("I'm printing a fluffy red goat...<br>");
+
+        // Comment
+
+        /* Mitmerealine
+        kommentaar.
+        Saab olla mitmel real.
+        */
+
+        var kärt = 7;
+        document.write(kärt);
+
+        var kärt2 = "kärt";
+        document.write(kärt2);
+
+        var num1 = 4;
+        var num2 = 2;
+        document.write(num1 + num2);
+        document.write(num1 - num2);
+        document.write(num1 * num2);
+        document.write(num1 / num2);
+        document.write(num1 + 1); // on sama mis num1++;
+
+        function Congrats() {
+            document.write("starting congrats");
+            alert("Congratulations!")
+            document.write("ending congrats");
+        }
+        Congrats();
+
+        function ShowCurtain(CurtainNumber, prize) {
+            alert("You opened curtain number " + CurtainNumber + "You Won: " + prize);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Let's make a deal!</h1>
+    <input type="button" value="Curtain 1" onclick="ShowCurtain(1, 'a toothpick')" />
+    <input type="button" value="Curtain 2" onclick="ShowCurtain(2, 'a toothpick')" />
+    <input type="button" value="Curtain 3" onclick="ShowCurtain(3, 'an elephant')" />
+
+    <div> <br>
+        <script>
+            function BasicAddition(num1, num2) {
+                return num1 + num2;
+
+            }
+            const result = BasicAddition(1, 2); // var asemel kasutatakse const ja let
+            document.write(result);
+
+        </script>
+    </div>
+
+    <!--
+    <div>
+        <script>
+            function GoodNight() {
+                document.write("Good night! <br>");
+                GoodMorning();
+
+            }
+            function GoodMorning() {
+                document.write("Good morning! <br>");
+                GoodNight();
+
+            }
+
+            function Start() {
+                GoodMorning();
+            }
+
+            Start();
+        </script>
+    </div> -->
+
+    <div>
+        <script>
+            var num1 = 2;
+            var num2 = 2;
+
+            if (num1 == num2) {
+                document.write("2 + 2 = 4");
+
+            }
+        </script>
+    </div>
+
+    <div>
+        <script>
+            if ("banana" == "pineapple") {
+                ChoppingBanana();
+            } else if ("banana" == "cherry") {
+                ChoppingCherry
+            } else {
+                ChoppingPineapple();
+            }
+        </script>
+    </div>
+
+    <script>
+        function VendingPendingMachine(pendingTime) {
+
+            switch (pendingTime) {
+                case 1:
+                    //
+                    PendingMessage(pendingTime);
+                    break;
+                case 2:
+                    //
+                    PendingMessage(pendingTime);
+                    break;
+                case 3:
+                    //
+                    PendingMessage(pendingTime);
+                    break;
+                default:
+                    //
+                    PendingMessage(pendingTime);
+                    break;
+            }
+        }
+
+        function PendingMessage(time) {
+            alert("You have to wait " + time + "minutes!");
+        }
+    </script>
+
+    <div>
+        <h1>The Vending Pending Machine!</h1>
+        <input type="button" value="1" onclick="VendingPendingMachine('1 ')" />
+        <input type="button" value="2" onclick="VendingPendingMachine('2 ')" />
+        <input type="button" value="3" onclick="VendingPendingMachine('3 ')" />
+        <input type="button" value="4" onclick="VendingPendingMachine('7 ')" />
+    </div>
+
+    <div class="grey">
+        <script>
+
+            const loopNum = 20; // kui kasutada seda, siis peab allpol i < 10 asendama loopNum'iga
+
+            const text = "I will totally understand JavaScript like a pro.<br>";
+
+            function WriteLineMachine(lineText) {
+
+
+                for (let i = 0; i < loopNum; i++) { // esimene osa on algus-number, teine tähendab, et numbrid lähevad kuni 9ni, kolmas tähendab, et numbril lisatakse +1
+                    Write(lineText);
+                }
+            }
+
+            function Write(lineText) {
+                document.write(lineText);
+            }
+
+            function StartMachine(lineText) {
+                WriteLineMachine(lineText);
+            }
+
+            StartMachine(text);
+        </script>
+
+    </div>
+
+    <div>
+        <script>
+            const names = new Array("Tony", "Bob", "Jeff");
+            document.write(names[1] + "<br>"); // loetelus Tony on 0, Bob on 1, Jeff 3 jne
+            names[2] = "Tammy"; // Jeff muutub Tammyks
+            document.write(names[2] + "<br>");
+            names.push("George", "John"); // lisab loendisse juurde
+            document.write(names + "<br>")
+            names.sort(); // sorteerib tähestiku järjekorras
+            document.write(names + "<br>");
+            names.reverse();
+            document.write(names + "<br>");
+        </script>
+    </div>
+
+    <div>
+        <script>
+            function CheckValidation() {
+                const password = document.getElementById("password").value;
+                if (password != "1234") {
+                    alert("Password incorrect.");
+                } else {
+                    // success
+                    let y = document.getElementById("sendItem");
+                    y.className += "leftTrans";
+                }
+            }
+        </script>
+
+        <form id="sendItem">
+            Password <br><br>
+            <input type="password" id="password" placeholder="Password" />
+            <br>
+            <br>
+            <input type="button" id="submit" value="send!" onclick="CheckValidation();" />
+        </form>
+    </div>
+
+</body>
+
+
+</html>
